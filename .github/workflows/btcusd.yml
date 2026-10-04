@@ -23,7 +23,7 @@ jobs:
           pip install requests pandas numpy
 
       - name: Run BTC alert
-        env:
+                
+      - env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: |
-          python btc_alert.py
+          TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
